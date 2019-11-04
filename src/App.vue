@@ -1,17 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header title="Vue Todo" />
+    <main role="main" class="md-layout">
+      <section class="md-layout-item container">
+        <Todo />
+      </section>
+    </main>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header'
+import Todo from './components/Todo'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Header,
+    Todo,
   }
 }
 </script>
@@ -23,6 +29,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.container {
+  max-width: 960px;
+  min-width: 320px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0 auto;
 }
 </style>
